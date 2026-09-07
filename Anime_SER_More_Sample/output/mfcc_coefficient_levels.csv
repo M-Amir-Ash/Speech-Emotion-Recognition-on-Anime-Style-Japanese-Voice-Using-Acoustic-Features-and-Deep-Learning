@@ -1,0 +1,5 @@
+﻿analysis_level,coefficient_range,approximate_interpretation
+Overall spectral level,C0,average log-spectrum level; energy-related but not a direct loudness measurement
+Low-order spectral envelope,C1-C4,broad spectral-envelope and vocal-tract shape
+Mid-order spectral detail,C5-C8,intermediate spectral-envelope variation
+High-order fine detail,C9-C12,finer spectral variation; generally more noise-sensitive

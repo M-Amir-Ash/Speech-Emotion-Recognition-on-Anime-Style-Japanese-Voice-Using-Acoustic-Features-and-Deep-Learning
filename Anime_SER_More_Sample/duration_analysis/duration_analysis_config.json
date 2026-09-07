@@ -1,0 +1,60 @@
+{
+  "analysis": "Improvement 6 - Duration-Policy Analysis and Reporting",
+  "status": "complete",
+  "analysis_only": true,
+  "models_trained": false,
+  "dataset_rows": 1969,
+  "manifest_rows": {
+    "train": 1313,
+    "validation": 261,
+    "test": 395
+  },
+  "duration_source": "duration_sec in frozen train/validation/test manifests",
+  "duration_categories": {
+    "below": "duration_sec < 1.00",
+    "planned_interval": "1.00 <= duration_sec <= 6.00",
+    "above": "duration_sec > 6.00"
+  },
+  "standard_deviation_definition": "population standard deviation (ddof=0)",
+  "classification": "documented implementation refinement",
+  "recommended_paper_wording": "Most selected utterances (92.5%) were within the planned 1–6 s duration interval. A small number of shorter utterances were retained when they satisfied the remaining Japanese-dialogue, audio-quality, and clean-selection criteria.",
+  "canonical_manifest_sha256": {
+    "train": "ad93f123c69af5d4bf397b9003214589e757d0fb2e5194b4244f2c51db4902ba",
+    "validation": "96a352e69c739e0f17d9ffb709e7479f961a082f7319c287dd4fca14e67af09b",
+    "test": "4e1243695f40b1b81e38246a98007f87870ae227df02c60afa01731715f9186e"
+  },
+  "source_evidence": {
+    "proposal_pdf": "D:\\Telkom University Kuliah\\Kuliah S1\\Tugas S1\\Semester 6\\Proposal\\Speech_Emotion_Recognition_on_Anime_Style_Japanese_Voice_Using_Acoustic_Features_and_Deep_Learning_Proposal_Thesis_FIF_Telkom_University__Tel_U____PHN.pdf",
+    "proposal_pdf_sha256": "7c3480717a9ce5cbdbfcb1703c138a1a8b562daff4213212f4b6d46097d8d20b",
+    "proposal_pdf_page_index_1_based": 27,
+    "proposal_printed_page": 22,
+    "proposal_exact_duration_statement": "The planned duration of each audio segment is approximately 1 to 6 seconds.",
+    "proposal_exact_adjustment_statement": "During the implementation stage, the final duration range may be adjusted on the basis of the quality of the collected segments.",
+    "upstream_extraction_script": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split More Sample\\extract_segment_multimodal_pipeline.py",
+    "upstream_extraction_sha256": "1d797dee06ec2235f01b0a51d58c3bc76b668bf7ff5f03b90e2095cda22508c1",
+    "upstream_workflow_runner": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split More Sample\\emotion_workflow_runner.py",
+    "upstream_workflow_runner_sha256": "078131254b480691a311917370f4f897b5c594d738da861fa83e72650708c70a",
+    "upstream_clean_selector": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split More Sample\\cluster_clean_target_selector.py",
+    "upstream_clean_selector_sha256": "3595a74244d06ecb9c096d99f93478481714700c4b50866860d054d695ab13cb",
+    "implemented_segmentation_min_seconds": 0.65,
+    "implemented_emotion_clip_min_seconds": 0.65,
+    "implementation_interpretation": "Clips below 1.00 second were intentionally permitted when duration was at least 0.65 second and the Japanese-dialogue, quality, and later clean-selection gates passed.",
+    "final_clean_selector_duration_behavior": "Carries duration_sec as metadata and requires audio_quality_status=pass, but does not apply a new 1.00-second exclusion threshold."
+  },
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3"
+  },
+  "validation": {
+    "exactly_1969_unique_paths": true,
+    "exactly_1969_unique_sha256": true,
+    "duration_rows_complete": true,
+    "duration_timestamp_max_absolute_error_seconds": 1.382449710263245e-12,
+    "emotion_counts_reconciled": true,
+    "split_membership_read_only": true,
+    "files_removed": 0,
+    "labels_modified": 0,
+    "models_trained": 0
+  }
+}

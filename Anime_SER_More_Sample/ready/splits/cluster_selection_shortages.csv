@@ -1,0 +1,8 @@
+﻿emotion,target_count,selected_total_count,overlap_review_count,shortage_count,status
+Disgust,400,149,1827,251,shortage
+Sad,400,154,2719,246,shortage
+Angry,400,229,3094,171,shortage
+Pleasant_Surprise,400,275,16530,125,shortage
+Neutral,400,362,9588,38,shortage
+Fear,400,400,7741,0,pass
+Happy,400,400,18711,0,pass

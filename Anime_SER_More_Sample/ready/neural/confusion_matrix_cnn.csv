@@ -1,0 +1,8 @@
+﻿true_emotion,angry,disgust,fear,happy,neutral,pleasant_surprise,sad
+angry,33,3,1,5,1,2,0
+disgust,2,21,0,0,0,0,2
+fear,5,5,44,1,20,1,4
+happy,11,3,0,56,3,9,0
+neutral,8,2,8,3,40,2,6
+pleasant_surprise,14,7,0,25,4,12,1
+sad,0,1,1,1,4,0,24

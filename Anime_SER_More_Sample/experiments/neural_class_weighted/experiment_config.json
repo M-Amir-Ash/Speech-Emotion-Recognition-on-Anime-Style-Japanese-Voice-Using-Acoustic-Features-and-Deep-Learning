@@ -1,0 +1,146 @@
+{
+  "experiment": "Improvement 4 - Class-Weighted Neural Experiment",
+  "status": "complete",
+  "seed": 42,
+  "device": "cuda",
+  "software": {
+    "python": "3.11.13",
+    "torch": "2.11.0+cu128",
+    "librosa": "0.11.0",
+    "scikit_learn": "1.8.0"
+  },
+  "frozen_split_rows": {
+    "train": 1313,
+    "validation": 261,
+    "test": 395
+  },
+  "treatment": "nn.CrossEntropyLoss(weight=class_weights)",
+  "class_weight_formula": "n_train / (n_classes * train_class_count)",
+  "class_weight_source": "training data only",
+  "unchanged_training": {
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "tuning_epoch_limit": 10,
+    "final_epoch_limit": 25,
+    "early_stopping_patience": 5,
+    "early_stopping_metric": "validation_macro_f1",
+    "oversampling": false
+  },
+  "unchanged_log_mel": {
+    "sample_rate_hz": 16000,
+    "duration_seconds": 4,
+    "n_samples": 64000,
+    "mono": true,
+    "peak_normalization": true,
+    "experimental_enhancement": false,
+    "n_fft": 1024,
+    "hop_length": 256,
+    "n_mels": 128,
+    "power_to_db_ref": "np.max",
+    "standardization": "per_clip_global_mean_and_std"
+  },
+  "architectures": {
+    "cnn": "Conv(1,16)-pool2; Conv(16,32)-pool2; Conv(32,64)-adaptive_pool4x4; FC1024-128-dropout-FC7",
+    "cnn_bilstm": "three Conv-BatchNorm-ReLU blocks with pools (2,2),(2,2),(2,1); mel mean; bidirectional LSTM; mean-time; dropout-FC128-ReLU-dropout-FC7"
+  },
+  "search_spaces": {
+    "cnn": [
+      {
+        "dropout": 0.3,
+        "learning_rate": 0.001
+      },
+      {
+        "dropout": 0.4,
+        "learning_rate": 0.0005
+      },
+      {
+        "dropout": 0.5,
+        "learning_rate": 0.0003
+      }
+    ],
+    "cnn_bilstm": [
+      {
+        "dropout": 0.3,
+        "hidden_size": 64,
+        "learning_rate": 0.001
+      },
+      {
+        "dropout": 0.4,
+        "hidden_size": 96,
+        "learning_rate": 0.0005
+      },
+      {
+        "dropout": 0.4,
+        "hidden_size": 128,
+        "learning_rate": 0.0003
+      }
+    ]
+  },
+  "test_selection_policy": "test manifest is not loaded in tune phase; one evaluation per frozen weighted model in evaluate phase",
+  "fusion_modified": false,
+  "ser_training_scope": [
+    "weighted_cnn",
+    "weighted_cnn_bilstm"
+  ],
+  "manifest_sha256": {
+    "train": "ad93f123c69af5d4bf397b9003214589e757d0fb2e5194b4244f2c51db4902ba",
+    "validation": "96a352e69c739e0f17d9ffb709e7479f961a082f7319c287dd4fca14e67af09b",
+    "test": "4e1243695f40b1b81e38246a98007f87870ae227df02c60afa01731715f9186e"
+  },
+  "class_weights": {
+    "angry": 1.2179962396621704,
+    "disgust": 1.8571428060531616,
+    "fear": 0.6998934149742126,
+    "happy": 0.7078167200088501,
+    "neutral": 0.7750885486602783,
+    "pleasant_surprise": 1.0718367099761963,
+    "sad": 1.7367725372314453
+  },
+  "selected_configurations": {
+    "cnn": {
+      "dropout": 0.4,
+      "learning_rate": 0.0005,
+      "validation_macro_f1": 0.535186805551683,
+      "tuning_best_epoch": 10,
+      "final_training_validation_macro_f1": 0.631853852738866,
+      "final_training_best_epoch": 22
+    },
+    "cnn_bilstm": {
+      "dropout": 0.3,
+      "hidden_size": 64,
+      "learning_rate": 0.001,
+      "validation_macro_f1": 0.35656603560558114,
+      "tuning_best_epoch": 5,
+      "final_training_validation_macro_f1": 0.492914797635089,
+      "final_training_best_epoch": 16
+    }
+  },
+  "test_manifest_loaded": true,
+  "test_evaluations_per_model": 1,
+  "test_size": 395,
+  "final_results": [
+    {
+      "model_family": "cnn",
+      "method": "Log-Mel CNN + weighted cross-entropy",
+      "validation_macro_f1": 0.631853852738866,
+      "test_accuracy": 0.5822784810126582,
+      "test_macro_precision": 0.578285270066092,
+      "test_macro_recall": 0.6215200066274927,
+      "test_macro_f1": 0.5761748754564991,
+      "test_size": 395,
+      "test_evaluation_number": 1
+    },
+    {
+      "model_family": "cnn_bilstm",
+      "method": "Log-Mel CNN-BiLSTM + weighted cross-entropy",
+      "validation_macro_f1": 0.492914797635089,
+      "test_accuracy": 0.4810126582278481,
+      "test_macro_precision": 0.4641965599756569,
+      "test_macro_recall": 0.48176419490817113,
+      "test_macro_f1": 0.4613217855806425,
+      "test_size": 395,
+      "test_evaluation_number": 1
+    }
+  ]
+}

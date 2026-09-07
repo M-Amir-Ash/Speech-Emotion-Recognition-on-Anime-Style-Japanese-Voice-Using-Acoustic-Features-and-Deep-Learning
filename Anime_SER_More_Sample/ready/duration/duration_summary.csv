@@ -1,0 +1,2 @@
+﻿count,minimum_seconds,maximum_seconds,mean_seconds,median_seconds,standard_deviation_seconds,standard_deviation_definition,percentile_25_seconds,percentile_75_seconds
+1969,0.65,5.34,2.022135601828339,1.92,0.795604559394019,population_ddof_0,1.425,2.435

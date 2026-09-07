@@ -1,0 +1,8 @@
+﻿actual_emotion,angry,disgust,fear,happy,neutral,pleasant_surprise,sad
+angry,9,2,6,5,10,10,3
+disgust,2,4,7,3,4,2,3
+fear,7,3,25,13,17,11,4
+happy,5,3,15,26,12,9,12
+neutral,9,5,13,14,16,10,2
+pleasant_surprise,7,1,15,6,8,20,6
+sad,2,2,4,7,5,6,5

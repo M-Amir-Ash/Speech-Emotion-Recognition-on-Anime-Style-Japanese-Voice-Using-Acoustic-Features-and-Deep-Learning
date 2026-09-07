@@ -1,0 +1,9 @@
+{
+  "status": "one_time_test_evaluation_complete",
+  "selected_configurations_sha256": "3af266ce6b69fb995a5b82af2eb0c2d8a60fdff6306f4045fc7986f1ba678639",
+  "models": {
+    "cnn": "2d5d77abb95d3f97d1851d5ac44b944992d85bd6ac7a2b86aedb684b10e21f1e",
+    "cnn_bilstm": "51e278e677578503ed3b8037416754b2ccd2662590e55300276f21c181fcdc22"
+  },
+  "final_results_sha256": "d4bd7ad4b85cf31907be0b8d5c8b50562f1033105ceb7e407c35ec7d44eff651"
+}

@@ -1,0 +1,8 @@
+﻿emotion,label_id,train_count,class_weight,formula,source_split
+angry,0,154,1.2179962894248608,1313 / (7 * 154),train_only
+disgust,1,101,1.8571428571428572,1313 / (7 * 101),train_only
+fear,2,268,0.6998933901918977,1313 / (7 * 268),train_only
+happy,3,265,0.7078167115902965,1313 / (7 * 265),train_only
+neutral,4,242,0.7750885478158206,1313 / (7 * 242),train_only
+pleasant_surprise,5,175,1.0718367346938775,1313 / (7 * 175),train_only
+sad,6,108,1.7367724867724867,1313 / (7 * 108),train_only

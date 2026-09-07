@@ -1,0 +1,111 @@
+{
+  "experiment_name": "text_char_ngram",
+  "status": "completed_one_time_test_evaluation",
+  "method": "Character TF-IDF + Logistic Regression",
+  "purpose": "Japanese character n-gram baseline; original word-level baseline remains unchanged",
+  "random_state": 42,
+  "frozen_split_rows": {
+    "train": 1313,
+    "validation": 261,
+    "test": 395
+  },
+  "selection_data": [
+    "train",
+    "validation"
+  ],
+  "selection_metric": "validation_macro_f1",
+  "tie_breaking": [
+    "validation_accuracy descending",
+    "candidate_index ascending"
+  ],
+  "test_used_during_selection": false,
+  "final_fit_population": "frozen train split only, matching the original word-level baseline",
+  "candidate_grid": {
+    "analyzer": [
+      "char"
+    ],
+    "ngram_range": [
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "min_df": [
+      1,
+      2,
+      3
+    ],
+    "C": [
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ]
+  },
+  "candidate_count": 45,
+  "vectorizer_fixed_settings": {
+    "lowercase": true,
+    "norm": "l2",
+    "use_idf": true,
+    "smooth_idf": true,
+    "sublinear_tf": false
+  },
+  "logistic_regression_fixed_settings": {
+    "class_weight": "balanced",
+    "max_iter": 2000,
+    "random_state": 42,
+    "n_jobs": 1,
+    "solver": "lbfgs"
+  },
+  "fusion_modified": false,
+  "source_manifests": {
+    "train": {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\train_manifest.csv",
+      "sha256": "ad93f123c69af5d4bf397b9003214589e757d0fb2e5194b4244f2c51db4902ba"
+    },
+    "validation": {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\validation_manifest.csv",
+      "sha256": "96a352e69c739e0f17d9ffb709e7479f961a082f7319c287dd4fca14e67af09b"
+    },
+    "test": {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\test_manifest.csv",
+      "sha256": "4e1243695f40b1b81e38246a98007f87870ae227df02c60afa01731715f9186e"
+    }
+  },
+  "tuning_results_sha256": "f38f4db5c8186bbfe720e5e62ac94104f779ac05cc6ee448819cbd7efe7a5b6b",
+  "selected_hyperparameters_sha256": "d6b0cc622175bfa293b868ff83cdea8583bc06088dd705e93f5021f67a0df1cc",
+  "software_versions": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1"
+  },
+  "test_evaluation_count": 1,
+  "test_samples": 395,
+  "selected_configuration": {
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      4
+    ],
+    "min_df": 2,
+    "C": 5.0
+  },
+  "final_artifact_sha256": {
+    "final_results.csv": "adcc912abd26186c59c5e6111794b78441270ca5d78a7b6e3259b8eedf18a854",
+    "classwise_results.csv": "269bdbefb44031bca1e238eac0065addea535a1d3d1c04789310bb314ec219a5",
+    "confusion_matrix.csv": "47a2205062687dcd404bcbe01db574f8c4cabb39c7b8202c239d7216df3b0edc",
+    "comparison_with_word_baseline.csv": "9e56b58b388f76fd961e5c84f23b609804c7f5153418ddb52e62b5e3de876f26",
+    "per_class_f1_comparison.csv": "f393ee17ab6753ae71e4c2e2b7e3b276552251b416f8bdb1d4d484ba7edd5e8c"
+  },
+  "original_word_baseline_modified": false
+}

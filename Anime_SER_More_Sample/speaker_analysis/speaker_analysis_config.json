@@ -1,0 +1,89 @@
+{
+  "analysis_name": "anonymous_speaker_cluster_metadata",
+  "status": "completed_exploratory_low_reliability",
+  "interpretation": "source-media/episode group-disjoint; not speaker-independent",
+  "identity_type": "anonymous estimated voice-similarity cluster; not character recognition",
+  "reliable_speaker_identity_assignment": false,
+  "quality_gate": {
+    "metric": "singleton cluster share",
+    "maximum_allowed": 0.25,
+    "observed": 0.8551769331585845,
+    "passed": false,
+    "consequence_if_failed": "retain IDs only as exploratory similarity groups; do not treat the cluster count or overlap as verified speaker identity"
+  },
+  "speaker_model": "speechbrain/spkrec-ecapa-voxceleb",
+  "embedding_dimension": 192,
+  "embedding_details": {
+    "embedding_dimension": 192,
+    "embedding_source_counts": {
+      "new_ecapa": 1931,
+      "validated_existing_ecapa": 38
+    },
+    "model_source": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split\\.cache\\huggingface\\hub\\models--speechbrain--spkrec-ecapa-voxceleb\\snapshots\\0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+    "device": "cuda:0"
+  },
+  "clustering": {
+    "algorithm": "agglomerative",
+    "metric": "cosine",
+    "linkage": "average",
+    "cosine_distance_threshold": 0.42,
+    "number_of_clusters_forced": false,
+    "scope": "within conservatively derived anime/season domain",
+    "random_state": 42
+  },
+  "frozen_split_rows": {
+    "train": 1313,
+    "validation": 261,
+    "test": 395
+  },
+  "estimated_cluster_count": 1526,
+  "singleton_cluster_count": 1305,
+  "singleton_cluster_percentage": 85.51769331585845,
+  "cross_split_cluster_count": 92,
+  "cross_split_clip_count": 353,
+  "cross_split_clip_percentage": 17.92788217369223,
+  "source_manifests": {
+    "train": {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\train_manifest.csv",
+      "sha256": "ad93f123c69af5d4bf397b9003214589e757d0fb2e5194b4244f2c51db4902ba"
+    },
+    "validation": {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\validation_manifest.csv",
+      "sha256": "96a352e69c739e0f17d9ffb709e7479f961a082f7319c287dd4fca14e67af09b"
+    },
+    "test": {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\test_manifest.csv",
+      "sha256": "4e1243695f40b1b81e38246a98007f87870ae227df02c60afa01731715f9186e"
+    }
+  },
+  "existing_capability_inspected": {
+    "code": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split\\speaker_embedding_cluster.py",
+    "reused": "ECAPA model, 192-D normalized embeddings, anime/season domain convention, cosine average-linkage threshold 0.42",
+    "not_reused": "destructive output rebuild, audio copying, acoustic fallback, KMeans speaker-count heuristic, character-map generation"
+  },
+  "limitations": [
+    "No independent speaker ground-truth labels are available for clustering validation.",
+    "The VoxCeleb-trained ECAPA model is out of domain for expressive anime-style Japanese acting.",
+    "Short clips, emotion-dependent voice changes, music, and effects may split one speaker or merge different speakers.",
+    "Clustering is restricted within derived anime/season domains, so cross-domain same-voice overlap is not detected.",
+    "Centroid similarity and margins are diagnostics, not calibrated identity probabilities."
+  ],
+  "software_versions": {
+    "python": "3.11.13",
+    "numpy": "2.4.6",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0+cu128",
+    "torchaudio": "2.11.0+cu128",
+    "speechbrain": "1.1.1"
+  },
+  "artifact_sha256": {
+    "speaker_metadata.csv": "fad6c9a7b6cecdeec1e2450079a71610ae7a2251ed57db4c4ba3fb521e549527",
+    "speaker_cluster_summary.csv": "121c3123d76b7e5b56d1418f5d5e1cdb00ef597044eb9c861a82eb1bf95bde23",
+    "speaker_split_overlap.csv": "02327a1d87b4138aa0771ff40d67eb21829593f87a089277ce03cf6577a71c06",
+    "speaker_cluster_size_distribution.csv": "db35d98f14f9528aa9cc9cab896e486c2263ac64c2e55d7cb547f685de5b64bf",
+    "similarity_diagnostics.csv": "0b90c39a262ef65132e0e445b8c1128bd11f36f6bf4122eb191f9fac162e2044",
+    "threshold_sensitivity.csv": "f164857cc94ae01a9e5af61ab201866c6e42fbf382f578ceea0bee068e4938d3",
+    "embedding_index.csv": "f97269b7483d6a886e0556c6ee848b806972d0f74ea9116357ede93f7a39d775"
+  }
+}

@@ -1,0 +1,11 @@
+﻿setting,value
+Sampling rate,16000 Hz
+MFCC implementation,librosa.feature.mfcc
+Coefficient indices,C0-C12 (13 coefficients)
+Common audio preprocessing,16 kHz resampling; mono conversion; peak normalization
+Optional enhancement used,False
+Optional enhancement contents,silence trim; 80-4000 Hz band-pass; pre-emphasis 0.97; renormalization
+Pre-emphasis applied in primary experiment,False
+Per-coefficient summaries used by classical models,"mean, standard deviation, maximum, minimum, variance, Q1, median, Q3, IQR"
+Raw MFCC feature length,13 coefficients x 9 statistics = 117 features
+Correlation-filtered model input,88 features retained at threshold 0.95

@@ -1,0 +1,12 @@
+﻿overlap_category,cluster_count,unique_clip_count,clip_percentage_of_all,definition
+train_only,977,1123,57.03402742508888,mutually exclusive split-presence category
+validation_only,187,199,10.1066531234129,mutually exclusive split-presence category
+test_only,270,294,14.931437277805992,mutually exclusive split-presence category
+train_validation_only,25,87,4.4184865413915695,crosses train/validation but not test
+train_test_only,48,165,8.379888268156424,crosses train/test but not validation
+validation_test_only,8,20,1.015744032503809,crosses validation/test but not train
+all_three,11,81,4.113763331640427,"appears in train, validation, and test"
+cross_train_validation_inclusive,36,168,8.532249873031995,includes all-three clusters
+cross_train_test_inclusive,59,246,12.493651599796852,includes all-three clusters
+cross_validation_test_inclusive,19,101,5.129507364144236,includes all-three clusters
+any_cross_split,92,353,17.92788217369223,unique clusters and clips appearing in at least two splits

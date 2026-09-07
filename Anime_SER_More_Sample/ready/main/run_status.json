@@ -1,0 +1,20 @@
+{
+  "execution_status": "completed",
+  "completed_methods": [
+    "openSMILE eGeMAPS + XGBoost",
+    "MFCC + SVM",
+    "MFCC + Random Forest",
+    "MFCC + Gaussian Naive Bayes",
+    "MFCC + k-NN",
+    "Weighted late fusion (0.40 audio / 0.60 text)",
+    "Log-mel CNN",
+    "MFCC + Decision Tree",
+    "Log-mel CNN-BiLSTM",
+    "TF-IDF + Logistic Regression"
+  ],
+  "run_hyperparameter_tuning": true,
+  "use_train_oversampling": false,
+  "upstream_ready_for_final_training": "no",
+  "final_thesis_ready": false,
+  "message": "Execution completed. Check proposal_alignment.csv and pipeline_readiness.csv before reporting scores."
+}

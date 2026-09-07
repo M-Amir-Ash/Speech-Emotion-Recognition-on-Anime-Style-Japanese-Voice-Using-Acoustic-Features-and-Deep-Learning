@@ -1,0 +1,51 @@
+﻿method,error_rank,actual_emotion,predicted_emotion,error_count,class_support,error_rate_percent
+openSMILE eGeMAPS + XGBoost,1,Pleasant Surprise,Happy,17,63,26.984126984126984
+openSMILE eGeMAPS + XGBoost,2,Neutral,Fear,13,69,18.840579710144926
+openSMILE eGeMAPS + XGBoost,3,Angry,Pleasant Surprise,6,45,13.333333333333334
+openSMILE eGeMAPS + XGBoost,4,Sad,Happy,4,31,12.903225806451612
+openSMILE eGeMAPS + XGBoost,5,Neutral,Happy,8,69,11.594202898550725
+MFCC + SVM,1,Happy,Pleasant Surprise,13,82,15.853658536585366
+MFCC + SVM,2,Pleasant Surprise,Happy,9,63,14.285714285714286
+MFCC + SVM,3,Pleasant Surprise,Fear,7,63,11.11111111111111
+MFCC + SVM,4,Sad,Happy,3,31,9.67741935483871
+MFCC + SVM,5,Pleasant Surprise,Angry,6,63,9.523809523809524
+MFCC + Random Forest,1,Pleasant Surprise,Happy,21,63,33.333333333333336
+MFCC + Random Forest,2,Neutral,Fear,14,69,20.28985507246377
+MFCC + Random Forest,3,Angry,Neutral,6,45,13.333333333333334
+MFCC + Random Forest,4,Neutral,Happy,7,69,10.144927536231885
+MFCC + Random Forest,5,Happy,Pleasant Surprise,8,82,9.75609756097561
+MFCC + Gaussian Naive Bayes,1,Pleasant Surprise,Happy,19,63,30.158730158730158
+MFCC + Gaussian Naive Bayes,2,Neutral,Fear,9,69,13.043478260869565
+MFCC + Gaussian Naive Bayes,3,Disgust,Happy,3,25,12.0
+MFCC + Gaussian Naive Bayes,4,Disgust,Neutral,3,25,12.0
+MFCC + Gaussian Naive Bayes,5,Neutral,Happy,7,69,10.144927536231885
+MFCC + k-NN,1,Pleasant Surprise,Happy,28,63,44.44444444444444
+MFCC + k-NN,2,Disgust,Happy,8,25,32.0
+MFCC + k-NN,3,Fear,Neutral,15,80,18.75
+MFCC + k-NN,4,Sad,Happy,5,31,16.129032258064516
+MFCC + k-NN,5,Neutral,Angry,9,69,13.043478260869565
+Weighted late fusion (0.40 audio / 0.60 text),1,Pleasant Surprise,Happy,37,63,58.73015873015873
+Weighted late fusion (0.40 audio / 0.60 text),2,Sad,Neutral,8,31,25.806451612903224
+Weighted late fusion (0.40 audio / 0.60 text),3,Angry,Fear,10,45,22.22222222222222
+Weighted late fusion (0.40 audio / 0.60 text),4,Angry,Happy,8,45,17.77777777777778
+Weighted late fusion (0.40 audio / 0.60 text),5,Fear,Neutral,11,80,13.75
+Log-mel CNN,1,Pleasant Surprise,Happy,37,63,58.73015873015873
+Log-mel CNN,2,Sad,Neutral,8,31,25.806451612903224
+Log-mel CNN,3,Angry,Fear,9,45,20.0
+Log-mel CNN,4,Angry,Happy,8,45,17.77777777777778
+Log-mel CNN,5,Fear,Neutral,11,80,13.75
+MFCC + Decision Tree,1,Neutral,Angry,17,69,24.63768115942029
+MFCC + Decision Tree,2,Happy,Pleasant Surprise,18,82,21.951219512195124
+MFCC + Decision Tree,3,Pleasant Surprise,Fear,12,63,19.047619047619047
+MFCC + Decision Tree,4,Fear,Neutral,13,80,16.25
+MFCC + Decision Tree,5,Sad,Fear,5,31,16.129032258064516
+Log-mel CNN-BiLSTM,1,Pleasant Surprise,Happy,44,63,69.84126984126983
+Log-mel CNN-BiLSTM,2,Disgust,Neutral,14,25,56.0
+Log-mel CNN-BiLSTM,3,Angry,Happy,17,45,37.77777777777778
+Log-mel CNN-BiLSTM,4,Angry,Neutral,16,45,35.55555555555556
+Log-mel CNN-BiLSTM,5,Sad,Neutral,9,31,29.032258064516128
+TF-IDF + Logistic Regression,1,Neutral,Happy,69,69,100.0
+TF-IDF + Logistic Regression,2,Pleasant Surprise,Happy,62,63,98.41269841269842
+TF-IDF + Logistic Regression,3,Angry,Happy,44,45,97.77777777777777
+TF-IDF + Logistic Regression,4,Fear,Happy,78,80,97.5
+TF-IDF + Logistic Regression,5,Sad,Happy,30,31,96.7741935483871

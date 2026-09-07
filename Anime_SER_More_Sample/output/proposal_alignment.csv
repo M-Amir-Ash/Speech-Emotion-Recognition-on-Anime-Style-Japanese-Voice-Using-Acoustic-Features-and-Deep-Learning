@@ -1,0 +1,10 @@
+﻿proposal_reference,requirement,implementation,status
+§3.2,Effective split near 68% train / 12% validation / 20% test,Group-disjoint source-media split using 0.68 / 0.12 / 0.20 targets,implemented
+§3.1.4,13 MFCC coefficients × 9 statistical descriptors,117 raw MFCC statistics,implemented
+§3.1.4,Correlation filtering before classical ML,Training-only absolute-correlation filter at 0.95,implemented below
+§3.7,128-band normalized log-Mel,"128 bands, dB conversion, per-clip standardization",implemented
+§3.7–3.8,Six comparison branches and five MFCC classifiers,MFCC ML; CNN; CNN-BiLSTM; TF-IDF LR; 0.40/0.60 fusion; openSMILE-LLD XGBoost,implemented
+§3.4,"Common resampling, mono conversion, and normalization",16 kHz mono peak-normalized signal shared by all acoustic branches,implemented below
+§3.5,Speaker/character organization for quality control,Unknown speaker share=100.0%; identified character share=0.0%,BLOCKER — upstream pipeline incomplete
+§3.3 and Appendix D,Pseudo-label QC and manual-review support,Cluster-selected pseudo-labels; not independently verified ground truth,experimental only
+§3.9,"Accuracy, macro precision/recall/F1, confusion matrix, class-wise analysis",Saved for every completed method,implemented

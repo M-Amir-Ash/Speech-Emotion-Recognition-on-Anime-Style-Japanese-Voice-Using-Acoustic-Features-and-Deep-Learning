@@ -1,0 +1,45 @@
+# Credentials and local configuration
+**/TokenKeyHuggyFace.txt
+**/Project_N8N.txt
+**/.env
+**/.env.*
+!**/.env.example
+**/*credentials*.json
+
+# Python and notebook caches
+**/__pycache__/
+**/*.py[cod]
+**/.ipynb_checkpoints/
+**/.cache/
+
+# Raw and generated media
+**/*.wav
+**/*.mp3
+**/*.mp4
+**/*.mkv
+**/*.flac
+**/*.aac
+**/*.m4a
+Training Data/Auto Split More Sample/input/
+Training Data/Auto Split More Sample/input_audio/
+Training Data/Auto Split More Sample/output/
+
+# Downloaded pretrained-model caches
+Training Data/Auto Split More Sample/wav2vec2_checkpoints/
+**/model_cache/
+**/embeddings/
+**/*.ckpt
+**/*.safetensors
+**/pytorch_model.bin
+
+# Large reproducible and legacy caches
+Anime_SER_More_Sample/sample/
+Anime_SER_More_Sample/output/logmel_cache/
+Anime_SER_More_Sample/output_old_993_20260831/
+Anime_SER_More_Sample/ready.zip
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

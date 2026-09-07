@@ -1,0 +1,4 @@
+﻿duration_policy_category,sample_count,percentage_of_dataset
+below_1.00_second,148,7.516505840528187
+within_1.00_to_6.00_seconds,1821,92.48349415947182
+above_6.00_seconds,0,0.0

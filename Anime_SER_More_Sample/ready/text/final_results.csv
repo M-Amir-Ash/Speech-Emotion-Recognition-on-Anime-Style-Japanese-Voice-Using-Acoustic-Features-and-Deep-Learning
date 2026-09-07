@@ -1,0 +1,2 @@
+﻿method,analyzer,ngram_range,min_df,C,validation_macro_f1,test_accuracy,test_macro_precision,test_macro_recall,test_macro_f1,test_samples
+Character TF-IDF + Logistic Regression,char,"(2, 4)",2,5.0,0.2612740894492001,0.26582278481012656,0.24631117223861637,0.2428868383919549,0.24389325104261025,395

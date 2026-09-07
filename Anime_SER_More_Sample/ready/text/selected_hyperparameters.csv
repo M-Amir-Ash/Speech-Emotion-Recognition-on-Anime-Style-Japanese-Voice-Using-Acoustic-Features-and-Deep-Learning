@@ -1,0 +1,2 @@
+﻿validation_rank,candidate_index,analyzer,ngram_range,ngram_min,ngram_max,min_df,C,class_weight,validation_accuracy,validation_macro_precision,validation_macro_recall,validation_macro_f1,feature_count
+1,10,char,"(2, 4)",2,4,2,5.0,balanced,0.2720306513409962,0.2707055446045779,0.2621025074723864,0.2612740894492001,3939

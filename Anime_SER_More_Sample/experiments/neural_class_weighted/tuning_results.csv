@@ -1,0 +1,7 @@
+﻿model_family,method,candidate_index,dropout,hidden_size,learning_rate,best_epoch,validation_macro_f1
+cnn,Log-Mel CNN + weighted cross-entropy,2,0.4,,0.0005,10,0.535186805551683
+cnn,Log-Mel CNN + weighted cross-entropy,1,0.3,,0.001,9,0.5143092826857553
+cnn,Log-Mel CNN + weighted cross-entropy,3,0.5,,0.0003,8,0.36280734173055657
+cnn_bilstm,Log-Mel CNN-BiLSTM + weighted cross-entropy,1,0.3,64,0.001,5,0.35656603560558114
+cnn_bilstm,Log-Mel CNN-BiLSTM + weighted cross-entropy,3,0.4,128,0.0003,9,0.3499472644679316
+cnn_bilstm,Log-Mel CNN-BiLSTM + weighted cross-entropy,2,0.4,96,0.0005,7,0.3409947746540644

@@ -1,0 +1,7 @@
+﻿factor,earlier_notebook,current_notebook,expected_effect
+Accepted dataset,"Different curated pool; saved metadata shows about 1,793 anime clips before balancing/filtering","1,969 selected clips physically present in Anime_SER_More_Sample/sample",Scores are not directly comparable because the evaluated populations differ
+Test separation,Random stratified clip split,Upstream source_media/episode group-disjoint split,Reduces episode/source leakage; character leakage cannot be ruled out until speaker metadata is completed
+Class distribution,Balanced/filtered saved run,Highly imbalanced accepted pool; model oversampling enabled=False; natural validation/test,Natural test accuracy can fall; macro-F1 remains the primary comparison metric
+CNN implementation,128 Mel bands and 4x4 adaptive feature map,Now restored to the same 128-Mel and 4x4 architecture,Fixes the earlier packaged CNN information bottleneck
+Audio preprocessing,"Silence trim, peak normalization, 80-4000 Hz band-pass, pre-emphasis",Proposal-aligned 16 kHz mono peak normalization; optional enhancement enabled=False,All acoustic branches now receive the same common waveform preprocessing
+Transcript source,Included filename-derived text when reports were unavailable,Uses manifest transcripts and requires 100% coverage,Avoids source-name leakage but may reduce artificially predictive text cues

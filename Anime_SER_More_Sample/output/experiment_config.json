@@ -1,0 +1,18 @@
+{
+  "resource_name": "anime_sample",
+  "anime_sample_root": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\sample",
+  "random_state": 42,
+  "target_sample_rate": 16000,
+  "duration_seconds": 4,
+  "test_size": 0.2,
+  "validation_size": 0.12,
+  "primary_metric": "macro_f1",
+  "hyperparameter_tuning": true,
+  "tuning_data": "training and validation only",
+  "test_set_policy": "held out until final selected-model evaluation",
+  "excluded_modes": [
+    "tess_only",
+    "combined",
+    "transfer_clean_to_anime"
+  ]
+}

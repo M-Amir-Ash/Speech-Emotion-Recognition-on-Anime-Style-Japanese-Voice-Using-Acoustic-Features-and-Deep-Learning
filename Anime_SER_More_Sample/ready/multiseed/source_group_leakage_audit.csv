@@ -1,0 +1,6 @@
+﻿seed,assigned_rows,unique_file_paths,unique_sha256,duplicate_path_rows,duplicate_sha256_rows,paths_crossing_splits,sha256_crossing_splits,train_validation_group_overlap,train_test_group_overlap,validation_test_group_overlap,missing_emotions_train,missing_emotions_validation,missing_emotions_test,all_checks_pass,test_attempt_offset,test_split_score,validation_attempt_offset,validation_split_score
+42,1969,1969,1969,0,0,0,0,0,0,0,,,,True,3,0.051192295762031464,212,0.07150298219122227
+123,1969,1969,1969,0,0,0,0,0,0,0,,,,True,183,0.05279228920146255,63,0.05359697057067444
+2026,1969,1969,1969,0,0,0,0,0,0,0,,,,True,200,0.05860438367160205,78,0.047216044416564365
+3407,1969,1969,1969,0,0,0,0,0,0,0,,,,True,10,0.05234302238078774,231,0.0672570645635315
+7777,1969,1969,1969,0,0,0,0,0,0,0,,,,True,197,0.053200117977715046,117,0.06705947618776127

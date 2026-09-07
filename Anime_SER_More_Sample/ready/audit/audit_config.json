@@ -1,0 +1,41 @@
+{
+  "audit_seed": 20260905,
+  "samples_per_emotion": 15,
+  "total_samples": 105,
+  "emotion_order": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "pleasant_surprise",
+    "sad"
+  ],
+  "sampling_population_rows": 1969,
+  "sampling_method": "without replacement within each emotion, followed by deterministic global shuffle",
+  "source_manifests": [
+    {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\train_manifest.csv",
+      "sha256": "ad93f123c69af5d4bf397b9003214589e757d0fb2e5194b4244f2c51db4902ba"
+    },
+    {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\validation_manifest.csv",
+      "sha256": "96a352e69c739e0f17d9ffb709e7479f961a082f7319c287dd4fca14e67af09b"
+    },
+    {
+      "path": "D:\\Telkom University Kuliah\\Publikasi Paper\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Anime_SER_More_Sample\\output\\test_manifest.csv",
+      "sha256": "4e1243695f40b1b81e38246a98007f87870ae227df02c60afa01731715f9186e"
+    }
+  ],
+  "class_counts": {
+    "angry": 15,
+    "disgust": 15,
+    "fear": 15,
+    "happy": 15,
+    "neutral": 15,
+    "pleasant_surprise": 15,
+    "sad": 15
+  },
+  "reviewer_form_is_blinded_to_original_emotion": true,
+  "alternative_model_predictions_included": false
+}

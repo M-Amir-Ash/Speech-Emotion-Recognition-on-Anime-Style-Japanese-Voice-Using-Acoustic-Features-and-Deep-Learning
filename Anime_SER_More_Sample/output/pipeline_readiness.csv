@@ -1,0 +1,8 @@
+﻿check,observed,status
+Auto Split ready_for_final_training,no,BLOCKER
+Accepted audio mapped to cluster manifest,1969/1969,pass
+Transcript coverage,100.0%,pass
+Known speaker clusters,0.0%,BLOCKER
+Identified characters,0.0%,BLOCKER
+Cluster-selection target reached for all emotions,no,review
+Planned 1–6 second duration,92.5% inside range,review

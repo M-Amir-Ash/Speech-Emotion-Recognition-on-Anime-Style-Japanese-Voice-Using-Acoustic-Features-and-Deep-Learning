@@ -1,0 +1,3 @@
+﻿method,representation,validation_macro_f1,test_accuracy,test_macro_precision,test_macro_recall,test_macro_f1,delta_vs_original_validation_macro_f1,delta_vs_original_test_accuracy,delta_vs_original_test_macro_precision,delta_vs_original_test_macro_recall,delta_vs_original_test_macro_f1
+Original word TF-IDF + Logistic Regression,word unigram/bigram,0.0539818642712533,0.2075949367088607,0.0656146179401993,0.1429006968641115,0.0527464717230175,0.0,0.0,0.0,0.0,0.0
+Character TF-IDF + Logistic Regression,"character (2, 4)",0.2612740894492001,0.26582278481012656,0.24631117223861637,0.2428868383919549,0.24389325104261025,0.20729222517794682,0.058227848101265856,0.18069655429841708,0.09998614152784341,0.19114677931959276
