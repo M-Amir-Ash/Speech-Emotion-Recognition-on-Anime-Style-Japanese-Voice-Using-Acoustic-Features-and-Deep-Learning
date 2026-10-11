@@ -24,28 +24,28 @@ MFCC + k-NN,2,Disgust,Happy,8,25,32.0
 MFCC + k-NN,3,Fear,Neutral,15,80,18.75
 MFCC + k-NN,4,Sad,Happy,5,31,16.129032258064516
 MFCC + k-NN,5,Neutral,Angry,9,69,13.043478260869565
-Weighted late fusion (0.40 audio / 0.60 text),1,Pleasant Surprise,Happy,37,63,58.73015873015873
-Weighted late fusion (0.40 audio / 0.60 text),2,Sad,Neutral,8,31,25.806451612903224
-Weighted late fusion (0.40 audio / 0.60 text),3,Angry,Fear,10,45,22.22222222222222
-Weighted late fusion (0.40 audio / 0.60 text),4,Angry,Happy,8,45,17.77777777777778
-Weighted late fusion (0.40 audio / 0.60 text),5,Fear,Neutral,11,80,13.75
-Log-mel CNN,1,Pleasant Surprise,Happy,37,63,58.73015873015873
-Log-mel CNN,2,Sad,Neutral,8,31,25.806451612903224
-Log-mel CNN,3,Angry,Fear,9,45,20.0
-Log-mel CNN,4,Angry,Happy,8,45,17.77777777777778
-Log-mel CNN,5,Fear,Neutral,11,80,13.75
+Log-mel CNN,1,Pleasant Surprise,Happy,24,63,38.095238095238095
+Log-mel CNN,2,Sad,Neutral,7,31,22.580645161290324
+Log-mel CNN,3,Happy,Pleasant Surprise,17,82,20.73170731707317
+Log-mel CNN,4,Angry,Fear,9,45,20.0
+Log-mel CNN,5,Angry,Happy,8,45,17.77777777777778
+Weighted late fusion (0.40 audio / 0.60 text),1,Pleasant Surprise,Happy,23,63,36.507936507936506
+Weighted late fusion (0.40 audio / 0.60 text),2,Sad,Neutral,10,31,32.25806451612903
+Weighted late fusion (0.40 audio / 0.60 text),3,Angry,Pleasant Surprise,9,45,20.0
+Weighted late fusion (0.40 audio / 0.60 text),4,Neutral,Fear,12,69,17.391304347826086
+Weighted late fusion (0.40 audio / 0.60 text),5,Angry,Fear,7,45,15.555555555555555
 MFCC + Decision Tree,1,Neutral,Angry,17,69,24.63768115942029
 MFCC + Decision Tree,2,Happy,Pleasant Surprise,18,82,21.951219512195124
 MFCC + Decision Tree,3,Pleasant Surprise,Fear,12,63,19.047619047619047
 MFCC + Decision Tree,4,Fear,Neutral,13,80,16.25
 MFCC + Decision Tree,5,Sad,Fear,5,31,16.129032258064516
-Log-mel CNN-BiLSTM,1,Pleasant Surprise,Happy,44,63,69.84126984126983
-Log-mel CNN-BiLSTM,2,Disgust,Neutral,14,25,56.0
-Log-mel CNN-BiLSTM,3,Angry,Happy,17,45,37.77777777777778
-Log-mel CNN-BiLSTM,4,Angry,Neutral,16,45,35.55555555555556
-Log-mel CNN-BiLSTM,5,Sad,Neutral,9,31,29.032258064516128
-TF-IDF + Logistic Regression,1,Neutral,Happy,69,69,100.0
-TF-IDF + Logistic Regression,2,Pleasant Surprise,Happy,62,63,98.41269841269842
-TF-IDF + Logistic Regression,3,Angry,Happy,44,45,97.77777777777777
-TF-IDF + Logistic Regression,4,Fear,Happy,78,80,97.5
-TF-IDF + Logistic Regression,5,Sad,Happy,30,31,96.7741935483871
+Log-mel CNN-BiLSTM,1,Pleasant Surprise,Happy,46,63,73.01587301587301
+Log-mel CNN-BiLSTM,2,Disgust,Neutral,16,25,64.0
+Log-mel CNN-BiLSTM,3,Sad,Neutral,12,31,38.70967741935484
+Log-mel CNN-BiLSTM,4,Angry,Happy,16,45,35.55555555555556
+Log-mel CNN-BiLSTM,5,Sad,Fear,11,31,35.483870967741936
+TF-IDF + Logistic Regression,1,Disgust,Fear,6,25,24.0
+TF-IDF + Logistic Regression,2,Pleasant Surprise,Fear,15,63,23.80952380952381
+TF-IDF + Logistic Regression,3,Sad,Happy,7,31,22.580645161290324
+TF-IDF + Logistic Regression,4,Angry,Neutral,10,45,22.22222222222222
+TF-IDF + Logistic Regression,5,Angry,Pleasant Surprise,10,45,22.22222222222222

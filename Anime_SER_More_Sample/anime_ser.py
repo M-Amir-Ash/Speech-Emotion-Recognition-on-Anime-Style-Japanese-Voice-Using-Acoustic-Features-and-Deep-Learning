@@ -61,7 +61,7 @@ BATCH_SIZE = 32
 EPOCHS = 25
 TUNING_EPOCHS = 10
 RUN_HYPERPARAMETER_TUNING = True
-OUTPUT_DIR = Path(r"D:\Telkom University Kuliah\Publikasi Paper\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\Anime_SER_More_Sample\output")
+OUTPUT_DIR = Path(r"D:\Telkom University Kuliah\Publikasi Paper\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\Anime_SER_More_Sample\output")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_DIR = OUTPUT_DIR / "logmel_cache"
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
@@ -78,7 +78,7 @@ print("Device:", DEVICE)
 # Primary dataset copied from Training Data/Auto Split More Sample.
 # Resolve it explicitly so launching Python from another directory cannot select
 # an older dataset by accident.
-PROJECT_ROOT = Path(r"D:\Telkom University Kuliah\Publikasi Paper\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning")
+PROJECT_ROOT = Path(r"D:\Telkom University Kuliah\Publikasi Paper\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning")
 PACKAGE_ROOT = PROJECT_ROOT / "Anime_SER_More_Sample"
 PROPOSAL_PDF = Path(r"D:\Telkom University Kuliah\Kuliah S1\Tugas S1\Semester 6\Proposal\Speech_Emotion_Recognition_on_Anime_Style_Japanese_Voice_Using_Acoustic_Features_and_Deep_Learning_Proposal_Thesis_FIF_Telkom_University__Tel_U____PHN.pdf")
 AUTO_SPLIT_ROOT = PROJECT_ROOT / "Training Data" / "Auto Split More Sample"
@@ -1037,7 +1037,12 @@ if not RUN_HYPERPARAMETER_TUNING:
 text_tuning_rows = []
 for parameters in text_candidates:
     candidate = Pipeline([
-        ("tfidf", TfidfVectorizer(ngram_range=(1, 2), min_df=parameters["min_df"])),
+        ("tfidf", TfidfVectorizer(
+            analyzer="char",
+            ngram_range=(2, 4),
+            min_df=parameters["min_df"],
+            sublinear_tf=True,
+        )),
         ("model", LogisticRegression(
             C=parameters["C"], max_iter=2000, class_weight="balanced",
             random_state=RANDOM_STATE, n_jobs=SAFE_PARALLEL_JOBS,
@@ -1058,7 +1063,12 @@ text_tuning_tidy.to_csv(
 )
 
 text_model = Pipeline([
-    ("tfidf", TfidfVectorizer(ngram_range=(1, 2), min_df=best_text_parameters["min_df"])),
+    ("tfidf", TfidfVectorizer(
+        analyzer="char",
+        ngram_range=(2, 4),
+        min_df=best_text_parameters["min_df"],
+        sublinear_tf=True,
+    )),
     ("model", LogisticRegression(
         C=best_text_parameters["C"], max_iter=2000, class_weight="balanced",
         random_state=RANDOM_STATE, n_jobs=SAFE_PARALLEL_JOBS,

@@ -6,8 +6,8 @@
     "MFCC + Random Forest",
     "MFCC + Gaussian Naive Bayes",
     "MFCC + k-NN",
-    "Weighted late fusion (0.40 audio / 0.60 text)",
     "Log-mel CNN",
+    "Weighted late fusion (0.40 audio / 0.60 text)",
     "MFCC + Decision Tree",
     "Log-mel CNN-BiLSTM",
     "TF-IDF + Logistic Regression"
