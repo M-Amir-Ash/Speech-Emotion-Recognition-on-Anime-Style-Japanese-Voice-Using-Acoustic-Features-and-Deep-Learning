@@ -1,0 +1,58 @@
+{
+  "run_id": "20261024_historical_multimodal_full_v001_v002",
+  "mode": "historical_multimodal",
+  "run_utc": "2026-10-24T00:18:55.750636+00:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "zip": "<PROJECT_ROOT>\\jvnv_ver1.zip",
+  "sample_count": 1615,
+  "smoke_test": false,
+  "full_run": false,
+  "clean_clustering": false,
+  "historical_classifier": "<PROJECT_ROOT>\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split More Sample\\multimodal_emotion_classifier.py",
+  "historical_classifier_sha256": "02eec66f6655800615c8225d25d6dec654159849f67c98f4da6c1850283fd3a2",
+  "historical_config": "<PROJECT_ROOT>\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split More Sample\\emotion_classifier_config.json",
+  "historical_config_sha256": "ba4b6de43c19cace3ad709f849600dfdad859c97a5661a02b1c67a84d43d5531",
+  "model_cache_facts": {
+    "speechbrain_primary": {
+      "model_id": "speechbrain/emotion-recognition-wav2vec2-IEMOCAP",
+      "revision": "117a9c3dff08be81a3628eecf6a66b547ec1659b",
+      "snapshot": "<PROJECT_ROOT>\\JVNV_External_Validation\\model_cache\\huggingface\\hub\\models--speechbrain--emotion-recognition-wav2vec2-IEMOCAP\\snapshots\\117a9c3dff08be81a3628eecf6a66b547ec1659b",
+      "required_files_present": true,
+      "files": {
+        "hyperparams.yaml": true,
+        "wav2vec2.ckpt": true,
+        "model.ckpt": true,
+        "label_encoder.txt": true
+      }
+    },
+    "facebook_wav2vec2_feature_extractor": {
+      "model_id": "facebook/wav2vec2-base",
+      "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+      "snapshot": "<PROJECT_ROOT>\\Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning\\Training Data\\Auto Split More Sample\\wav2vec2_checkpoints\\models--facebook--wav2vec2-base\\snapshots\\0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+      "config_present": true,
+      "preprocessor_present": true,
+      "source": "existing historical read-only cache"
+    },
+    "audio_fallback": {
+      "model_id": "superb/wav2vec2-base-superb-er",
+      "revision": "441a7599c3b22107314dcbd9166621c5c83f2cc5",
+      "snapshot": "<PROJECT_ROOT>\\JVNV_External_Validation\\model_cache\\huggingface\\hub\\models--superb--wav2vec2-base-superb-er\\snapshots\\441a7599c3b22107314dcbd9166621c5c83f2cc5",
+      "snapshot_present": false
+    },
+    "text": {
+      "model_id": "koshin2001/Japanese-to-emotions",
+      "revision": "cb822f495c142bb1f8a5bcfe3185e0d6a7265b50",
+      "snapshot": "<PROJECT_ROOT>\\JVNV_External_Validation\\model_cache\\huggingface\\hub\\models--koshin2001--Japanese-to-emotions\\snapshots\\cb822f495c142bb1f8a5bcfe3185e0d6a7265b50",
+      "snapshot_present": true,
+      "weights_present": true
+    },
+    "asr": {
+      "model_id": "Systran/faster-whisper-small",
+      "revision": "536b0662742c02347bc0e980a01041f333bce120",
+      "snapshot": "<PROJECT_ROOT>\\JVNV_External_Validation\\model_cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120",
+      "snapshot_present": true,
+      "model_bin_present": true
+    }
+  }
+}

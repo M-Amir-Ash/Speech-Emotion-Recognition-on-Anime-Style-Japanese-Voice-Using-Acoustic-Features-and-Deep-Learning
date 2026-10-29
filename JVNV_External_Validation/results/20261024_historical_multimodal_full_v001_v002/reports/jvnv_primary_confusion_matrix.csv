@@ -1,0 +1,7 @@
+reference_emotion,Angry,Disgust,Fear,Happy,Neutral,Pleasant_Surprise,Sad,__ABSTAIN__,__FAILED__
+Angry,6,0,0,0,0,0,1,241,1
+Disgust,0,0,0,12,1,0,0,242,3
+Fear,0,0,55,7,0,0,0,198,5
+Happy,0,0,0,105,0,0,0,160,15
+Pleasant_Surprise,0,0,0,5,2,1,0,295,3
+Sad,0,0,2,0,0,0,21,233,1

@@ -1,0 +1,36 @@
+{
+  "primary_analysis": "all 1,615 JVNV recordings without duration or acoustic filtering",
+  "secondary_analysis": "recordings at or below the frozen historical 10-second auto-acceptance limit",
+  "long_clips_are_retained_in_primary": true,
+  "strata": [
+    {
+      "stratum": "all_recordings_unfiltered_primary",
+      "sample_count": 1615,
+      "raw_prediction_count": 1587,
+      "raw_prediction_coverage": 0.9826625386996904,
+      "raw_predicted_label_accuracy_full_stratum": 0.5764705882352941,
+      "raw_accuracy_among_returned_labels": 0.5866414618777568,
+      "auto_accepted_count": 218,
+      "auto_accepted_coverage": 0.13498452012383902,
+      "auto_accepted_accuracy": 0.8623853211009175,
+      "needs_review_count": 1369,
+      "rejected_count": 28,
+      "failed_inference_count": 0
+    },
+    {
+      "stratum": "historical_duration_eligible_secondary",
+      "sample_count": 1188,
+      "raw_prediction_count": 1169,
+      "raw_prediction_coverage": 0.984006734006734,
+      "raw_predicted_label_accuracy_full_stratum": 0.5715488215488216,
+      "raw_accuracy_among_returned_labels": 0.5808383233532934,
+      "auto_accepted_count": 218,
+      "auto_accepted_coverage": 0.1835016835016835,
+      "auto_accepted_accuracy": 0.8623853211009175,
+      "needs_review_count": 951,
+      "rejected_count": 19,
+      "failed_inference_count": 0
+    }
+  ],
+  "outcome_reason_report": "historical_multimodal_outcome_reasons.csv"
+}

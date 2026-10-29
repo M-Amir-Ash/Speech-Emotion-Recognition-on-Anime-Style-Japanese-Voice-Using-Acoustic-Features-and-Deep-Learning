@@ -1,0 +1,181 @@
+{
+  "emotion_labels": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Neutral",
+    "Pleasant_Surprise",
+    "Sad"
+  ],
+  "audio": {
+    "target_sr": 16000,
+    "min_duration_sec": 0.5,
+    "max_duration_sec": 8.0
+  },
+  "models": {
+    "asr": {
+      "enabled": true,
+      "backend": "whisperx",
+      "fallback_backend": "faster-whisper",
+      "name": "small",
+      "device": "cuda",
+      "compute_type": "float16",
+      "language": "ja",
+      "beam_size": 3
+    },
+    "mel_cnn": {
+      "enabled": true,
+      "checkpoint_path": "models/mel_cnn_7emotion.pt",
+      "device": "cuda",
+      "fallback_to_cpu": true,
+      "n_mels": 128,
+      "max_duration_sec": 4.0
+    },
+    "embedding_emotion": {
+      "enabled": true,
+      "backend": "emotion2vec",
+      "fallback_backends": [
+        "wav2vec2",
+        "hubert"
+      ],
+      "checkpoint_path": "",
+      "classifier_path": "models/emotion_embedding_classifier.joblib",
+      "device": "cuda",
+      "fallback_to_cpu": true
+    },
+    "audio_emotion_baseline": {
+      "enabled": true,
+      "name": "speechbrain/emotion-recognition-wav2vec2-IEMOCAP",
+      "device": "cuda",
+      "fallback_to_cpu": true
+    },
+    "audio_emotion": {
+      "name": "speechbrain/emotion-recognition-wav2vec2-IEMOCAP",
+      "device": "cuda",
+      "fallback_name": "superb/wav2vec2-base-superb-er"
+    },
+    "text_emotion": {
+      "enabled": true,
+      "weight_as_weak_signal": true,
+      "name": "koshin2001/Japanese-to-emotions",
+      "device": "cuda"
+    },
+    "prosody": {
+      "enabled": true
+    }
+  },
+  "fusion": {
+    "normal_dialogue": {
+      "mel_cnn": 0.3,
+      "embedding": 0.3,
+      "audio_baseline": 0.15,
+      "prosody": 0.2,
+      "text": 0.05
+    },
+    "short_vocal_reaction": {
+      "mel_cnn": 0.35,
+      "embedding": 0.3,
+      "audio_baseline": 0.1,
+      "prosody": 0.25,
+      "text": 0.0
+    },
+    "low_transcript_reliability": {
+      "mel_cnn": 0.35,
+      "embedding": 0.3,
+      "audio_baseline": 0.1,
+      "prosody": 0.25,
+      "text": 0.0
+    },
+    "base_weights": {
+      "audio": 0.22,
+      "text": 0.48,
+      "prosody": 0.3
+    },
+    "min_final_confidence": 0.55,
+    "min_final_gap": 0.12
+  },
+  "decision": {
+    "auto_accept": {
+      "top_score": 0.8,
+      "top_gap": 0.25,
+      "model_agreement_count": 2
+    },
+    "needs_review": {
+      "top_score": 0.55
+    },
+    "strict_classes": {
+      "Disgust": {
+        "top_score": 0.88,
+        "top_gap": 0.35,
+        "model_agreement_count": 2
+      },
+      "Pleasant_Surprise": {
+        "top_score": 0.86,
+        "top_gap": 0.3,
+        "model_agreement_count": 2
+      }
+    }
+  },
+  "paths": {
+    "input_bases": [
+      "output/japanese_dialogue",
+      "output/character_vocal_effect",
+      "output/other_or_effect"
+    ],
+    "classify_folders": [
+      "japanese_dialogue"
+    ],
+    "reject_folders": [
+      "character_vocal_effect",
+      "other_or_effect"
+    ],
+    "output_base": "output/multimodal_emotion_classified"
+  },
+  "output": {
+    "copy_files": true,
+    "preserve_original_filename": true
+  },
+  "classification": {
+    "emotion_set": "7",
+    "label_helper": "ensemble_pseudo_labeling",
+    "background_reduction": "original_plus_uvr_comparison",
+    "speaker_character_control": "metadata_only",
+    "auto_label_policy": "balanced",
+    "feature_extractors": [
+      "mel_cnn",
+      "embedding_emotion",
+      "audio_baseline",
+      "prosody",
+      "text_weak"
+    ]
+  },
+  "review": {
+    "high_confidence_min_confidence": 0.8,
+    "high_confidence_min_gap": 0.25,
+    "min_transcript_reliability": 0.45,
+    "max_auto_duration_sec": 10.0
+  },
+  "label_maps": {
+    "audio_to_canonical": {
+      "angry": "Angry",
+      "sad": "Sad",
+      "happy": "Happy",
+      "neutral": "Neutral"
+    },
+    "text_to_canonical": {
+      "anger": "Angry",
+      "angry": "Angry",
+      "sadness": "Sad",
+      "sad": "Sad",
+      "joy": "Happy",
+      "happy": "Happy",
+      "anticipation": "Pleasant_Surprise",
+      "fear": "Fear",
+      "disgust": "Disgust",
+      "surprise": "Pleasant_Surprise",
+      "trust": "Neutral",
+      "neutral": "Neutral"
+    }
+  }
+}

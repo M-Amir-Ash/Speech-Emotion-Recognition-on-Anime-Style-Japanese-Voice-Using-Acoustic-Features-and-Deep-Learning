@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "random_seed": 0,
+  "target_sample_rate": 16000,
+  "labels": ["Angry", "Disgust", "Fear", "Happy", "Neutral", "Pleasant_Surprise", "Sad"],
+  "reference_mapping": {
+    "anger": "Angry",
+    "angry": "Angry",
+    "disgust": "Disgust",
+    "fear": "Fear",
+    "happy": "Happy",
+    "happiness": "Happy",
+    "sad": "Sad",
+    "sadness": "Sad",
+    "surprise": "Pleasant_Surprise"
+  },
+  "expected_jvnv_labels": ["anger", "disgust", "fear", "happy", "sad", "surprise"],
+  "smoke_clips": 12,
+  "cluster_target_per_emotion": 400,
+  "cluster_feature": "multi_feature",
+  "historical_pipeline_relative": "Speech Emotion Recognition on Anime-Style Japanese Voice Using Acoustic Features and Deep Learning/Training Data/Auto Split More Sample",
+  "asr": {"backend": "faster-whisper", "model": "small", "language": "ja", "beam_size": 3}
+}

@@ -1,0 +1,13 @@
+data/**/*.wav
+results/**/runtime/
+model_cache/
+asr_env/
+ser_env/
+version_probe/
+**/__pycache__/
+**/.pytest_cache/
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.safetensors

@@ -1,0 +1,18 @@
+outcome_status,outcome_reason,count
+auto_accept,balanced_angry_supported,6
+auto_accept,balanced_fear_supported,57
+auto_accept,balanced_happy_supported,129
+auto_accept,balanced_neutral_supported,3
+auto_accept,balanced_pleasant_surprise_supported,1
+auto_accept,balanced_sad_supported,22
+needs_review,duration_too_long,418
+needs_review,uncertain_difficult_emotion,300
+needs_review,uncertain_dominant_emotion,145
+needs_review,uncertain_fear,141
+needs_review,uncertain_fusion,21
+needs_review,uncertain_happy,245
+needs_review,uncertain_neutral,99
+reject,Low_quality | noise_like_vs_dataset,4
+reject,SFX_rejection | high_zcr_flat_noise,20
+reject,SFX_rejection | noise_like_high_flat_low_harm,2
+reject,SFX_rejection | noise_like_high_flat_low_harm | high_zcr_flat_noise,2

@@ -1,0 +1,132 @@
+{
+  "validation_question": "How well does the reconstructed automatic Japanese emotion-labeling pipeline agree with independently labeled Japanese emotional speech, without acoustic sample selection?",
+  "benchmark_scope": "external Japanese acted-speech benchmark; not direct anime-domain pseudo-label verification",
+  "primary_dataset": "all JVNV reference recordings; no clean-clustering or acoustic-overlap filtering",
+  "total_reference_recordings": 1615,
+  "successful_predictions": 1587,
+  "prediction_coverage": 0.9826625386996904,
+  "raw_predicted_label_accuracy_full_population": 0.5764705882352941,
+  "operational_predictions": 218,
+  "operational_coverage": 0.13498452012383902,
+  "auto_accepted_predictions": 218,
+  "auto_accepted_accuracy": 0.8623853211009175,
+  "abstentions": 1369,
+  "failed_inferences": 28,
+  "primary_operational_accuracy_full_population": 0.11640866873065016,
+  "primary_operational_macro_precision_full_population": 0.788901870603217,
+  "primary_operational_macro_recall_full_population": 0.11527059857775133,
+  "primary_operational_macro_f1_full_population": 0.17652890925226739,
+  "accuracy_among_successfully_returned_labels": 0.5866414618777568,
+  "macro_f1_among_successfully_returned_labels": 0.588074365390037,
+  "false_neutral_count": 134,
+  "reference_labels": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Pleasant_Surprise",
+    "Sad"
+  ],
+  "model_output_labels": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Neutral",
+    "Pleasant_Surprise",
+    "Sad"
+  ],
+  "reference_mapping_note": "JVNV Surprise is prospectively mapped to Pleasant_Surprise; JVNV has no Neutral reference class.",
+  "acoustic_overlap_interpretation": "Acoustic overlap is not label error and never excludes a row from primary metrics.",
+  "per_class_full_population": {
+    "Angry": {
+      "precision": 1.0,
+      "recall": 0.024096385542168676,
+      "f1": 0.047058823529411764,
+      "support": 249
+    },
+    "Disgust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 258
+    },
+    "Fear": {
+      "precision": 0.9649122807017544,
+      "recall": 0.20754716981132076,
+      "f1": 0.3416149068322981,
+      "support": 265
+    },
+    "Happy": {
+      "precision": 0.813953488372093,
+      "recall": 0.375,
+      "f1": 0.5134474327628362,
+      "support": 280
+    },
+    "Pleasant_Surprise": {
+      "precision": 1.0,
+      "recall": 0.0032679738562091504,
+      "f1": 0.006514657980456026,
+      "support": 306
+    },
+    "Sad": {
+      "precision": 0.9545454545454546,
+      "recall": 0.08171206225680934,
+      "f1": 0.15053763440860216,
+      "support": 257
+    }
+  },
+  "conditional_successful_predictions": {
+    "subset": "successfully_returned_labels_only",
+    "sample_count": 1587,
+    "successful_predictions": 1587,
+    "coverage": 1.0,
+    "accuracy": 0.5866414618777568,
+    "macro_precision": 0.7328900094666455,
+    "macro_recall": 0.5789860809751702,
+    "macro_f1": 0.588074365390037,
+    "false_neutral_count": 134,
+    "per_class": {
+      "Angry": {
+        "precision": 0.8849557522123894,
+        "recall": 0.4032258064516129,
+        "f1": 0.554016620498615,
+        "support": 248
+      },
+      "Disgust": {
+        "precision": 0.8309859154929577,
+        "recall": 0.23137254901960785,
+        "f1": 0.3619631901840491,
+        "support": 255
+      },
+      "Fear": {
+        "precision": 0.6411960132890365,
+        "recall": 0.7423076923076923,
+        "f1": 0.6880570409982175,
+        "support": 260
+      },
+      "Happy": {
+        "precision": 0.4497354497354497,
+        "recall": 0.9622641509433962,
+        "f1": 0.6129807692307693,
+        "support": 265
+      },
+      "Pleasant_Surprise": {
+        "precision": 0.8404669260700389,
+        "recall": 0.7128712871287128,
+        "f1": 0.7714285714285715,
+        "support": 303
+      },
+      "Sad": {
+        "precision": 0.75,
+        "recall": 0.421875,
+        "f1": 0.54,
+        "support": 256
+      }
+    }
+  },
+  "auto_accepted": 218,
+  "needs_review": 1369,
+  "rejected": 28,
+  "acceptance_rate": 0.13498452012383902
+}
