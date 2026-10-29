@@ -45,3 +45,7 @@ Never commit a real token or secret to this repository.
 ## Verified reproducibility release
 
 Start with `docs/PAPER_EVIDENCE_MAP.md`, then read `docs/BIAS_AND_LEAKAGE_AUDIT.md` and `datasets/DATASET_CARD.md`. The organized `src/`, `configs/`, `notebooks/`, `datasets/`, `results/`, and `figures/` directories contain sanitized copies of preserved historical evidence. The canonical table is not described as prediction-level reproduced because its original row-level predictions are absent.
+
+## Dataset evidence and audio availability
+
+[`docs/PAPER_DATASET_EVIDENCE.md`](docs/PAPER_DATASET_EVIDENCE.md) maps the 68,860-record pseudo-labeled collection to the 1,969-record canonical experiment and reports the actual publication status. The anime-derived WAV and ZIP payloads are verified locally but are not published because redistribution permission has not been established. Sanitized manifests and path-free SHA-256 indexes are provided instead.
