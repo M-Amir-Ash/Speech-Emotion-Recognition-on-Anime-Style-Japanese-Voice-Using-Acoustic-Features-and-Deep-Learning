@@ -1,0 +1,125 @@
+{
+  "emotion_labels": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Neutral",
+    "Pleasant_Surprise",
+    "Sad"
+  ],
+  "models": {
+    "asr": {
+      "enabled": true,
+      "backend": "faster-whisper",
+      "language": "ja",
+      "device": "cuda",
+      "compute_type": "float16"
+    },
+    "japanese_audio_ser": {
+      "enabled": true,
+      "preferred_models": [
+        {
+          "name": "Bagus/wav2vec2-xlsr-japanese-speech-emotion-recognition",
+          "backend": "transformers"
+        },
+        {
+          "name": "imprt/kushinada-hubert-large-jtes-er",
+          "backend": "s3prl"
+        },
+        {
+          "name": "imprt/kushinada-hubert-base-jtes-er",
+          "backend": "s3prl"
+        },
+        {
+          "name": "imprt/izanami-wav2vec2-large-jtes-er",
+          "backend": "s3prl"
+        },
+        {
+          "name": "imprt/izanami-wav2vec2-base-jtes-er",
+          "backend": "s3prl"
+        }
+      ],
+      "device": "cuda",
+      "fallback_to_cpu": true
+    },
+    "japanese_ssl_embedding": {
+      "enabled": false,
+      "note": "Disable for now unless models/japanese_ssl_emotion_classifier.joblib exists."
+    },
+    "general_7class_audio_support": {
+      "enabled": true,
+      "preferred_models": [
+        {
+          "name": "Dpngtm/wav2vec2-emotion-recognition",
+          "backend": "transformers"
+        }
+      ],
+      "purpose": "support missing classes only",
+      "device": "cuda",
+      "fallback_to_cpu": true
+    },
+    "audio_baseline_fallback": {
+      "enabled": true,
+      "preferred_models": [
+        "speechbrain/emotion-recognition-wav2vec2-IEMOCAP",
+        "superb/wav2vec2-base-superb-er"
+      ],
+      "device": "cuda",
+      "fallback_to_cpu": true
+    },
+    "text_emotion": {
+      "enabled": true,
+      "model": "koshin2001/Japanese-to-emotions",
+      "weak_support_only": true,
+      "device": "cuda",
+      "fallback_to_cpu": true
+    },
+    "prosody": {
+      "enabled": true
+    }
+  },
+  "manual_label_maps": {
+    "Bagus/wav2vec2-xlsr-japanese-speech-emotion-recognition": {
+      "ang": "Angry",
+      "joy": "Happy",
+      "neu": "Neutral",
+      "sad": "Sad"
+    }
+  },
+  "fusion": {
+    "normal_dialogue": {
+      "japanese_audio_ser": 0.45,
+      "general_7class_audio_support": 0.15,
+      "audio_baseline_fallback": 0.05,
+      "prosody": 0.30,
+      "text": 0.05
+    },
+    "short_vocal_reaction": {
+      "japanese_audio_ser": 0.30,
+      "general_7class_audio_support": 0.20,
+      "audio_baseline_fallback": 0.05,
+      "prosody": 0.45,
+      "text": 0.00
+    },
+    "low_transcript_reliability": {
+      "japanese_audio_ser": 0.35,
+      "general_7class_audio_support": 0.20,
+      "audio_baseline_fallback": 0.05,
+      "prosody": 0.40,
+      "text": 0.00
+    },
+    "fallback_no_japanese_model": {
+      "general_7class_audio_support": 0.20,
+      "audio_baseline_fallback": 0.10,
+      "prosody": 0.60,
+      "text": 0.10
+    },
+    "fallback_no_japanese_model_short_reaction": {
+      "general_7class_audio_support": 0.25,
+      "audio_baseline_fallback": 0.05,
+      "prosody": 0.70,
+      "text": 0.00
+    }
+  }
+}

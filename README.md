@@ -40,3 +40,8 @@ repository copy of `anime_ser.ipynb` contains source code without the stale
 Credential files, API tokens, raw anime media, generated audio workspaces,
 downloaded model caches, and duplicate feature caches are intentionally excluded.
 Never commit a real token or secret to this repository.
+
+
+## Verified reproducibility release
+
+Start with `docs/PAPER_EVIDENCE_MAP.md`, then read `docs/BIAS_AND_LEAKAGE_AUDIT.md` and `datasets/DATASET_CARD.md`. The organized `src/`, `configs/`, `notebooks/`, `datasets/`, `results/`, and `figures/` directories contain sanitized copies of preserved historical evidence. The canonical table is not described as prediction-level reproduced because its original row-level predictions are absent.

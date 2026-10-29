@@ -43,3 +43,13 @@ Anime_SER_More_Sample/ready.zip
 .idea/
 Thumbs.db
 .DS_Store
+
+
+# Verified-release safeguards
+**/*.pt
+**/*.pth
+**/*.h5
+**/*.joblib
+**/*.pkl
+**/*.onnx
+**/runtime/

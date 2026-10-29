@@ -1,0 +1,5 @@
+model,evaluation_cohort,support,test_denominator,coverage,macro_f1,weighted_f1,accuracy,label_basis
+egemaps_xgboost,full_test_population,13462,13462,1.0,0.2470132868319022,0.26067209820326226,0.2619967315406329,inherited_pseudo_labels
+egemaps_xgboost,label_conditioned_selector_passing_test,455,13462,0.033798841182588024,0.7421070288885393,0.7522633562179183,0.7538461538461538,inherited_pseudo_labels
+mfcc_svm,full_test_population,13462,13462,1.0,0.21154036145788702,0.22374899086869918,0.22166097162383003,inherited_pseudo_labels
+mfcc_svm,label_conditioned_selector_passing_test,455,13462,0.033798841182588024,0.6917093890423293,0.7067887018709775,0.7076923076923077,inherited_pseudo_labels

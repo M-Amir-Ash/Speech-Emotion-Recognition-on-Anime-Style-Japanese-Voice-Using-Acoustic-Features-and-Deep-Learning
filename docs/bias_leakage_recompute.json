@@ -1,0 +1,221 @@
+{
+  "canonical_overlap": {
+    "rows": {
+      "train": 1313,
+      "validation": 261,
+      "test": 395
+    },
+    "overlap_source_group": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "overlap_sha256": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "overlap_clip_id": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "overlap_file_path": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "overlap_speaker": {
+      "train__validation": 1,
+      "train__test": 1,
+      "validation__test": 1
+    },
+    "overlap_character": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "speaker_composition": {
+      "train": {
+        "UNKNOWN_SPEAKER": 1313
+      },
+      "validation": {
+        "UNKNOWN_SPEAKER": 261
+      },
+      "test": {
+        "UNKNOWN_SPEAKER": 395
+      }
+    },
+    "character_nonnull": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "class_counts": {
+      "train": {
+        "angry": 154,
+        "disgust": 101,
+        "fear": 268,
+        "happy": 265,
+        "neutral": 242,
+        "pleasant_surprise": 175,
+        "sad": 108
+      },
+      "validation": {
+        "angry": 30,
+        "disgust": 23,
+        "fear": 52,
+        "happy": 53,
+        "neutral": 51,
+        "pleasant_surprise": 37,
+        "sad": 15
+      },
+      "test": {
+        "angry": 45,
+        "disgust": 25,
+        "fear": 80,
+        "happy": 82,
+        "neutral": 69,
+        "pleasant_surprise": 63,
+        "sad": 31
+      }
+    },
+    "within_split_duplicate_sha": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "within_split_duplicate_path": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    }
+  },
+  "selection_sensitivity": {
+    "shape": [
+      27834,
+      9
+    ],
+    "columns": [
+      "model",
+      "evaluation_cohort",
+      "partition_row",
+      "clip_id",
+      "sha256",
+      "source_group",
+      "true_label",
+      "selector_pass",
+      "predicted_label"
+    ],
+    "schema_map": {
+      "true": "true_label",
+      "pred": "predicted_label",
+      "model": "model",
+      "selector": "selector_pass"
+    },
+    "rows_per_model": {
+      "mfcc_svm": 13917,
+      "egemaps_xgboost": 13917
+    },
+    "duplicate_model_clip_rows_across_cohorts": 910,
+    "metrics": {
+      "egemaps_xgboost__full_test_population": {
+        "support": 13462,
+        "accuracy": 0.2619967315406329,
+        "macro_precision": 0.24133871435907794,
+        "macro_recall": 0.29745879928276553,
+        "macro_f1": 0.2470132868319022,
+        "weighted_f1": 0.26067209820326226,
+        "coverage": 1.0
+      },
+      "egemaps_xgboost__label_conditioned_selector_passing_test": {
+        "support": 455,
+        "accuracy": 0.7538461538461538,
+        "macro_precision": 0.7629225874201657,
+        "macro_recall": 0.72925488795054,
+        "macro_f1": 0.7421070288885393,
+        "weighted_f1": 0.7522633562179183,
+        "coverage": 0.033798841182588024
+      },
+      "mfcc_svm__full_test_population": {
+        "support": 13462,
+        "accuracy": 0.22166097162383003,
+        "macro_precision": 0.21560296562305198,
+        "macro_recall": 0.26878130185146704,
+        "macro_f1": 0.21154036145788702,
+        "weighted_f1": 0.22374899086869918,
+        "coverage": 1.0
+      },
+      "mfcc_svm__label_conditioned_selector_passing_test": {
+        "support": 455,
+        "accuracy": 0.7076923076923077,
+        "macro_precision": 0.7071233654714166,
+        "macro_recall": 0.6856377302029477,
+        "macro_f1": 0.6917093890423293,
+        "weighted_f1": 0.7067887018709775,
+        "coverage": 0.033798841182588024
+      }
+    },
+    "selector_counts": {
+      "false": 13007,
+      "true": 455
+    }
+  },
+  "jvnv": {
+    "rows": 1615,
+    "unique_clip_ids": 1615,
+    "duplicate_clip_ids": 0,
+    "successful": 1587,
+    "full_population_raw_agreement": 0.5764705882352941,
+    "returned_metrics_six_reference_classes": {
+      "support": 1587,
+      "accuracy": 0.5866414618777568,
+      "macro_precision": 0.7328900094666455,
+      "macro_recall": 0.5789860809751702,
+      "macro_f1": 0.588074365390037,
+      "weighted_f1": 0.5942119262943519
+    },
+    "returned_metrics_seven_model_classes": {
+      "support": 1587,
+      "accuracy": 0.5866414618777568,
+      "macro_precision": 0.6281914366856961,
+      "macro_recall": 0.49627378369300307,
+      "macro_f1": 0.5040637417628889,
+      "weighted_f1": 0.5942119262943519
+    },
+    "reference_label_set": [
+      "Angry",
+      "Disgust",
+      "Fear",
+      "Happy",
+      "Pleasant_Surprise",
+      "Sad"
+    ],
+    "auto_accepted": 218,
+    "acceptance_coverage": 0.13498452012383902,
+    "accepted_accuracy": 0.8623853211009175,
+    "needs_review": 1369,
+    "rejected": 28,
+    "quality_status": {
+      "pass": 1587,
+      "rejected": 28
+    },
+    "reference_counts": {
+      "Angry": 249,
+      "Disgust": 258,
+      "Fear": 265,
+      "Happy": 280,
+      "Pleasant_Surprise": 306,
+      "Sad": 257
+    },
+    "prediction_counts_returned": {
+      "Angry": 113,
+      "Disgust": 71,
+      "Fear": 301,
+      "Happy": 567,
+      "Neutral": 134,
+      "Pleasant_Surprise": 257,
+      "Sad": 144
+    }
+  }
+}

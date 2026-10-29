@@ -1,0 +1,8 @@
+true_pseudo_label,Angry,Disgust,Fear,Happy,Neutral,Pleasant_Surprise,Sad
+Angry,269,95,116,111,110,70,43
+Disgust,75,146,59,84,61,46,43
+Fear,248,151,603,215,212,182,268
+Happy,578,424,694,857,468,422,546
+Neutral,275,258,338,344,371,269,279
+Pleasant_Surprise,492,341,584,579,471,438,529
+Sad,28,36,87,128,97,22,300

@@ -1,0 +1,75 @@
+{
+  "experiment": "Improvement 5 - Group-Safe Split Variability Analysis",
+  "status": "complete",
+  "dataset_rows": 1969,
+  "predefined_split_seeds": [
+    42,
+    123,
+    2026,
+    3407,
+    7777
+  ],
+  "canonical_seed": 42,
+  "split_method": "two-stage GroupShuffleSplit; best of 300 attempts by canonical distribution/size/minority score",
+  "target_split_proportions": {
+    "train": 0.68,
+    "validation": 0.12,
+    "test": 0.2
+  },
+  "model_random_state": 42,
+  "models": {
+    "required": [
+      "openSMILE eGeMAPS + XGBoost",
+      "MFCC + SVM"
+    ],
+    "optional_random_forest_run": false
+  },
+  "fixed_hyperparameters": {
+    "opensmile_xgboost": {
+      "max_depth": 5,
+      "n_estimators": 300,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    "mfcc_svm": {
+      "C": 100.0,
+      "gamma": 0.001,
+      "kernel": "rbf",
+      "class_weight": "balanced"
+    }
+  },
+  "feature_policy": {
+    "sample_rate_hz": 16000,
+    "mono": true,
+    "peak_normalization": true,
+    "experimental_enhancement": false,
+    "mfcc": "13 coefficients x 9 canonical statistics; correlation threshold 0.95 learned per-seed training split only",
+    "opensmile": "eGeMAPSv02 LowLevelDescriptors x 7 canonical statistics"
+  },
+  "selection_policy": "No per-seed tuning. Configurations frozen from canonical experiment before any regenerated test evaluation.",
+  "test_evaluation_policy": "One evaluation for each predefined seed/model pair; no seed is selected.",
+  "aggregate_standard_deviation": "sample standard deviation (pandas ddof=1)",
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "librosa": "0.11.0",
+    "opensmile": "2.6.0",
+    "xgboost": "3.2.0"
+  },
+  "canonical_manifest_sha256": {
+    "train": "ad93f123c69af5d4bf397b9003214589e757d0fb2e5194b4244f2c51db4902ba",
+    "validation": "96a352e69c739e0f17d9ffb709e7479f961a082f7319c287dd4fca14e67af09b",
+    "test": "4e1243695f40b1b81e38246a98007f87870ae227df02c60afa01731715f9186e"
+  },
+  "seed42_membership_symmetric_differences": {
+    "train": 0,
+    "validation": 0,
+    "test": 0
+  },
+  "test_evaluations_per_seed_model": 1,
+  "all_predefined_seeds_reported": true,
+  "zero_source_group_leakage_all_seeds": true
+}

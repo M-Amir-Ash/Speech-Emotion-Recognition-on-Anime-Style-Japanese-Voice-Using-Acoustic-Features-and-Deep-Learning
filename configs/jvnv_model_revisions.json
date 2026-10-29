@@ -1,0 +1,8 @@
+{
+  "Bagus/wav2vec2-xlsr-japanese-speech-emotion-recognition": "26edb2426828afabe63957bafdc9d5de383fbf11",
+  "Dpngtm/wav2vec2-emotion-recognition": "033a5751a5bbe5b0b67c2c71e6102c38de35a346",
+  "koshin2001/Japanese-to-emotions": "cb822f495c142bb1f8a5bcfe3185e0d6a7265b50",
+  "speechbrain/emotion-recognition-wav2vec2-IEMOCAP": "117a9c3dff08be81a3628eecf6a66b547ec1659b",
+  "superb/wav2vec2-base-superb-er": "441a7599c3b22107314dcbd9166621c5c83f2cc5",
+  "Systran/faster-whisper-small": "536b0662742c02347bc0e980a01041f333bce120"
+}
